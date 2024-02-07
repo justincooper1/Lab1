@@ -56,4 +56,10 @@ public:
         temp.setKey(k);
         return bag.search(temp);
     }
+
+    // Return the size of the dictionary
+    // Uses numitems from ABag.h
+    int size() const override {
+        return bag.numItems();
+    }
 };
