@@ -19,4 +19,22 @@ public:
     void clear() override {
         bag.emptyBag();
     }
+
+    // Insert a record
+    bool insert(const Key& k, const E& e) override {
+        KVpair<Key, E> newPair(k, e);
+        return bag.addItem(newPair);
+    }
+
+    // Remove a record using key
+    bool remove(const Key& k, const E& rtnVal) override {
+        KVpair<Key, E> temp;
+        if (find(k, rtnVal)) {
+            bag.remove(temp);
+            return true;
+        }
+        return false;
+    }
+
+
 };

@@ -55,8 +55,7 @@ public:
         return false;
     }
 
-    // Finds the record using returnValue and if the record is found updates
-    // returnValue based on the contents of the bag and returns true.
+    // Finds the record using returnValue and if the record is found updates returnValue based on the contents of the bag and returns true
     bool search(E& returnValue) const override {
         for (int i = 0; i < size; ++i) {
             if (data[i] == returnValue) {
