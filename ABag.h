@@ -11,8 +11,8 @@ private:
     int size; // Current number of items in the bag
 
 public:
-    // Constructor
-    ABag() : capacity(DEFAULT_CAPACITY), size(0) {
+    // Constructor with initial capacity
+    ABag(size_t initialCapacity = DEFAULT_CAPACITY) : capacity(initialCapacity), size(0) {
         data = new E[capacity];
     }
 
